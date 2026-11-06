@@ -7,3 +7,6 @@
 | 380f7df4.jpg | A tall N Seoul tower stands against a clear blue sky. | Yam B Chhetri | CC0 (WordPress Photo Directory) | https://pd.w.org/2025/04/96168073f14bb70f8.30290771-1536x2048.jpeg |
 | 288025e0.jpg | Back view of couple sitting on top of stairs at night, and a | Nilo Velez | CC0 (WordPress Photo Directory) | https://pd.w.org/2024/02/46165c137c0bbeaf8.60818844-2048x1361.jpg |
 | bfff4199.jpg | A group of people stands on a rocky shore, observing a sunri | Jiwoon Kim | CC0 (WordPress Photo Directory) | https://pd.w.org/2025/04/51867f2e565713157.46269616-2048x1536.jpg |
+| 90b9f32c.jpg | An older man with grey hair is seen from behind, taking a ph | Nilo Velez | CC0 (WordPress Photo Directory) | https://pd.w.org/2025/05/961683438e54e9af3.73806727-2048x1366.jpg |
+| 75816635.jpg | Gwanghwamun, Seoul | Luke Carbis | CC0 (WordPress Photo Directory) | https://pd.w.org/2021/12/11061c10ff511f913.26941659-1679x2048.jpg |
+| 3a48016e.jpg | Black tea is in between the laptop, the external keyboard, a | binitagothe | CC0 (WordPress Photo Directory) | https://pd.w.org/2024/02/60165c34a593dc3a8.85443754-1536x2048.jpg |
