@@ -44,6 +44,12 @@
   - 글꼴: tools/fonts/GmarketSans*.woff
 - 폰트: Pretendard(OFL). 새 세션에서 없으면 github.com/orioncactus/pretendard 릴리스 zip을 ~/.fonts에 설치.
 
+## 릴스 음성·음악·블로그 방문 이유 (사용자 요청 2026-11-06)
+- 릴스는 **반드시 음성 내레이션 + 배경음악** 포함. `python3 tools/make_voice_reel.py voice/script.json 장면폴더 bgm.wav out.mp4` (RATE=+22% 권장, 30~40초)
+  - 대본은 화면 문구와 같은 내용으로(자막·음성 일치). 합성 음성이므로 인스타 'AI 정보' 표시 권장.
+  - BGM: `python3 tools/make_music.py bgm.wav --sec N --mood calm|bright` (자체 제작, 저작권 없음). Freesound·위키미디어는 이 환경에서 다운로드 차단됨.
+- **블로그로 올 이유를 반드시 만든다**: 글마다 SNS에 다 못 담는 '도구형 자료' 1개 이상 포함(예: 30초 자가진단 체크리스트, 금액 계산표, 서류 준비 목록, 단계별 화면 경로). SNS 마지막 장면·답글·캡션에서 그 자료 이름을 구체적으로 안내. 핵심 답(날짜·금액)은 SNS에서도 공개.
+
 ## 블로그/워프 글 작성 기준
 - 원문 핵심 질문·대상 독자·이익 정리. 날짜·금액·대상·신청조건·경기정보는 최신 공식 자료로 검증.
 - 마감된 행사·시행 전 정책을 현재 신청 가능한 것처럼 쓰지 않는다.

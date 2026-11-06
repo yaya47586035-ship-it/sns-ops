@@ -57,7 +57,7 @@ cards=[
  card(6,'bfff4199.jpg','center',f'''<div style="{L};bottom:56px"><span class="pill" style="font-size:52px;background:#FF5A4E;color:#fff">꼭 기억하세요</span>
 <h2 class="hd" style="font-size:132px;margin-top:28px">12월 1일 지나면<br><span class="y">신청 불가!</span></h2>
 <p class="chk" style="font-size:50px;margin-top:26px"><b>✓</b>저장하고 가족에게 공유</p>
-<p class="chk" style="font-size:44px;margin-top:14px"><b>✓</b>요건표·FAQ는 프로필 링크</p></div>'''),
+<p class="chk" style="font-size:44px;margin-top:14px"><b>✓</b>30초 자가진단표는 프로필 링크</p></div>'''),
 ]
 def reel(f,pos,inner,bubble=None,tail='62%'):
     b=f'<div class="bubble" style="--tail:{tail};left:70px;right:190px;top:260px;font-size:50px">{bubble}</div>' if bubble else ''
@@ -80,8 +80,9 @@ reels=[
 <p class="chk" style="font-size:50px;margin-top:26px"><b>✓</b>안내문 없으면 홈택스</p></div>'''),
  reel('bfff4199.jpg','40% center',f'''<div style="{R};top:860px"><span class="pill" style="font-size:52px;background:#FF5A4E;color:#fff">꼭 기억하세요</span>
 <h2 class="hd" style="font-size:146px;margin-top:34px">12월 1일<br>지나면<br><span class="y">신청 불가!</span></h2></div>'''),
- reel('380f7df4.jpg','center 40%',f'''<div style="{R};top:820px"><span class="pill" style="font-size:52px">소득표 · <em>신청 경로</em></span>
-<h2 class="hd" style="font-size:146px;margin-top:34px">디피로그에<br><span class="y">표로 정리</span></h2>
-<p class="chk" style="font-size:54px;margin-top:30px"><b>✓</b>프로필 링크에서 확인</p></div>'''),
+ reel('380f7df4.jpg','center 40%',f'''<div style="{R};top:800px"><span class="pill" style="font-size:52px"><em>30초</em> 자가진단</span>
+<h2 class="hd" style="font-size:146px;margin-top:34px">나도 대상?<br><span class="y">체크리스트</span></h2>
+<p class="chk" style="font-size:52px;margin-top:30px"><b>✓</b>가구별 기준표까지 정리</p>
+<p class="chk" style="font-size:52px;margin-top:14px"><b>✓</b>프로필 링크 → 디피로그</p></div>'''),
 ]
 json.dump({"cards":cards,"reel":reels},open(os.path.join(HERE,'spec_photo.json'),'w',encoding='utf-8'),ensure_ascii=False)
