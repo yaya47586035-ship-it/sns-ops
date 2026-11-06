@@ -43,7 +43,7 @@
   - 사진: WordPress Photo Directory(CC0, Openverse API `source=wordpress&license=cc0`)에서 검색·다운로드, photos/CREDITS.md에 기록.
   - 글꼴: tools/fonts/GmarketSans*.woff
 - 워프 업로드: `tools/wp_publish.py` (REST API). 앱 비밀번호 Basic 인증은 서버에서 막힘(401) → 쿠키 로그인 세션(WP_COOKIE_JAR, WP_NONCE_FILE)으로 업로드. **비밀번호는 저장소·파일에 절대 저장 금지**, 세션마다 사용자에게 받거나 크롬 로컬 세션 사용.
-- 광고 '광고' 라벨 넣지 않음 / 문장 끝 마침표마다 줄바꿈 / 목차는 플러그인 자동(직접 넣지 않음) / Rank Math 85점 이상(LAYOUT.md 7절).
+- 광고 '광고' 라벨 넣지 않음 / 문장 끝 마침표마다 빈 줄 한 줄(<br><br>) / 목차는 플러그인 자동(직접 넣지 않음) / Rank Math 85점 이상(LAYOUT.md 7절).
 - 폰트: Pretendard(OFL). 새 세션에서 없으면 github.com/orioncactus/pretendard 릴리스 zip을 ~/.fonts에 설치.
 
 ## 릴스 음성·음악·블로그 방문 이유 (사용자 요청 2026-11-06)
