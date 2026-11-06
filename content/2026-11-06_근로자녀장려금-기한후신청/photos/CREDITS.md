@@ -10,3 +10,6 @@
 | 90b9f32c.jpg | An older man with grey hair is seen from behind, taking a ph | Nilo Velez | CC0 (WordPress Photo Directory) | https://pd.w.org/2025/05/961683438e54e9af3.73806727-2048x1366.jpg |
 | 75816635.jpg | Gwanghwamun, Seoul | Luke Carbis | CC0 (WordPress Photo Directory) | https://pd.w.org/2021/12/11061c10ff511f913.26941659-1679x2048.jpg |
 | 3a48016e.jpg | Black tea is in between the laptop, the external keyboard, a | binitagothe | CC0 (WordPress Photo Directory) | https://pd.w.org/2024/02/60165c34a593dc3a8.85443754-1536x2048.jpg |
+| 64ed3362.jpg | Senior couple walks hand in hand down a tiled sidewalk, with motorcycl | Nilo Velez | CC0 (WordPress Photo Directory) | https://pd.w.org/2024/06/844665d7c6e8eb6d1.57622885-2048x1365.jpg |
+| e2f7f3be.jpg | dried flowers,letters | kaorock72 | CC0 (WordPress Photo Directory) | https://pd.w.org/2022/11/73636c4b4f92bcf9.89418634-2048x1366.jpg |
+| 26867247.jpg | Man scrolling phone during conference in hall. WordPress logo on the l | Blazej Zablotny | CC0 (WordPress Photo Directory) | https://pd.w.org/2023/05/39364651ac537fdd4.01164103-2048x1365.jpg |

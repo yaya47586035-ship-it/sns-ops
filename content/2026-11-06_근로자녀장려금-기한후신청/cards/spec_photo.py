@@ -64,18 +64,18 @@ def reel(f,pos,inner,bubble=None,tail='62%'):
     return {"html":ST+bg(f,pos)+b+inner}
 R='position:absolute;left:48px;right:150px'
 reels=[
- reel('a5b5c64a.jpg','58% center',f'''<div style="{R};top:820px"><span class="pill" style="font-size:52px">2025년 <em>근로·자녀장려금</em></span>
+ reel('64ed3362.jpg','center 40%',f'''<div style="{R};top:820px"><span class="pill" style="font-size:52px">2025년 <em>근로·자녀장려금</em></span>
 <h1 class="hd" style="font-size:150px;margin-top:34px"><span class="y">아직 안</span><br><span class="y">받았다면?</span></h1>
 <p class="chk" style="font-size:56px;margin-top:30px"><b>✓</b>12월 1일(화)까지 신청</p></div>''',bubble='5월에 놓친 장려금,<br>아직 기회 있어요!'),
  reel('288025e0.jpg','45% center',f'''<div style="{R};top:820px"><span class="pill" style="font-size:52px">국세청 <em>11월 2일</em> 안내</span>
 <h2 class="hd" style="font-size:146px;margin-top:34px"><span class="y">26만 가구</span><br>안내문 발송</h2>
 <p class="chk" style="font-size:54px;margin-top:30px"><b>✓</b>5월 정기 신청 놓친 가구</p></div>'''),
- reel('2d4fae96.jpg','center 30%',f'''<div style="{R};top:780px"><span class="pill" style="font-size:52px">핵심만 <em>3가지</em></span>
+ reel('e2f7f3be.jpg','center center',f'''<div style="{R};top:780px"><span class="pill" style="font-size:52px">핵심만 <em>3가지</em></span>
 <h2 class="hd" style="font-size:136px;margin-top:34px;line-height:1.24">마감 <span class="y">12.1</span><br>지급 <span class="y">95%</span><br>지급일 <span class="y">1.15</span></h2></div>'''),
  reel('2965d9a0.jpg','center 35%',f'''<div style="{R};top:780px"><span class="pill" style="font-size:52px">근로장려금 <em>최대</em></span>
 <h2 class="hd" style="font-size:128px;margin-top:34px;line-height:1.24">단독 <span class="y">165만</span><br>홑벌이 <span class="y">285만</span><br>맞벌이 <span class="y">330만</span></h2>
 <p class="chk" style="font-size:54px;margin-top:26px"><b>✓</b>자녀 1명당 최대 100만</p></div>'''),
- reel('698a3768.jpg','center 30%',f'''<div style="{R};top:800px"><span class="pill" style="font-size:52px"><em>신청</em> 방법</span>
+ reel('26867247.jpg','center 40%',f'''<div style="{R};top:800px"><span class="pill" style="font-size:52px"><em>신청</em> 방법</span>
 <h2 class="hd" style="font-size:124px;margin-top:34px;line-height:1.22">QR·카톡<br>ARS<br><span class="y">1544-9944</span></h2>
 <p class="chk" style="font-size:50px;margin-top:26px"><b>✓</b>안내문 없으면 홈택스</p></div>'''),
  reel('bfff4199.jpg','40% center',f'''<div style="{R};top:860px"><span class="pill" style="font-size:52px;background:#FF5A4E;color:#fff">꼭 기억하세요</span>
