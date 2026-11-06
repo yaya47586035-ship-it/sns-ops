@@ -1,0 +1,13 @@
+*{margin:0;box-sizing:border-box}
+body{font-family:'Pretendard',sans-serif;letter-spacing:-0.02em;word-break:keep-all}
+:root{--navy:#0E2A47;--navy2:#163A61;--acc:#FFC93C;--ink:#14202E;--paper:#F4F6F9;--red:#FF5A4E}
+.frame{position:relative;overflow:hidden}
+.reel{width:1080px;height:1920px;background:var(--navy);color:#fff}
+.card{width:1080px;height:1350px;background:var(--paper);color:var(--ink)}
+.brand{font-weight:700;font-size:34px;opacity:.85;display:flex;align-items:center;gap:12px}
+.brand i{width:18px;height:18px;border-radius:50%;background:var(--acc);display:inline-block}
+.acc{color:var(--acc)} .red{color:var(--red)}
+.hl{background:linear-gradient(transparent 58%,var(--acc) 58%);}
+.safe .zone{position:absolute;background:rgba(255,60,60,.28);border:3px dashed #ff4d4d;color:#fff;font-size:30px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+.card.dark{color:#fff}
