@@ -1,26 +1,29 @@
-"""디피로그 워드프레스 업로드 (인증은 프록시가 주입). 사용:
+"""디피로그 워드프레스 업로드. 인증: 프록시 주입(앱 비밀번호) 또는 쿠키 세션(WP_COOKIE_JAR, WP_NONCE_FILE 환경변수). 사용:
 python3 wp_publish.py 콘텐츠폴더 --status draft|publish
 콘텐츠폴더/01_difilog_post.html 상단 주석에서 제목·슬러그·카테고리·태그·요약을 읽음.
 """
 import re,sys,json,os,subprocess,argparse,urllib.parse
 ap=argparse.ArgumentParser();ap.add_argument('dir');ap.add_argument('--status',default='draft');a=ap.parse_args()
 B='https://blog.difizone.com/wp-json/wp/v2'
+AUTH=[]
+if os.environ.get('WP_COOKIE_JAR'):
+    AUTH=['-b',os.environ['WP_COOKIE_JAR'],'-H','X-WP-Nonce: '+open(os.environ['WP_NONCE_FILE']).read().strip()]
 def curl(args):
-    r=subprocess.run(['curl','-sS','-A','Mozilla/5.0']+args,capture_output=True,text=True)
+    r=subprocess.run(['curl','-sS','-A','Mozilla/5.0']+AUTH+args,capture_output=True,text=True)
     try: return json.loads(r.stdout)
     except: raise SystemExit('bad response: '+r.stdout[:500]+r.stderr)
 src=open(os.path.join(a.dir,'01_difilog_post.html'),encoding='utf-8').read()
 head=re.search(r'<!--(.*?)-->',src,re.S).group(1)
 def f(k): return re.search(rf'^\s*{k}:\s*(.+)$',head,re.M).group(1).strip()
-title=f('제목');slug=f('슬러그\(고유주소\)');cat=f('카테고리');tags=[t.strip() for t in f('태그').split(',')];excerpt=f('요약\(메타 설명\)')
+title=f('제목');slug=f(r'슬러그\(고유주소\)');cat=f('카테고리');tags=[t.strip() for t in f('태그').split(',')];excerpt=f(r'요약\(메타 설명\)')
 body=src[src.index('-->')+3:].strip()
 st=os.path.join(a.dir,'wp_state.json');S=json.load(open(st)) if os.path.exists(st) else {}
 # duplicate check
 ex=curl([f'{B}/posts?slug={urllib.parse.quote(slug)}&status=publish,draft,pending,future,private&context=edit&_fields=id,status,link'])
 if ex and not S.get('post_id'): raise SystemExit(f'이미 같은 슬러그 글 있음: {ex}')
 def upload(path,alt):
-    name=os.path.basename(path)
-    r=curl(['-X','POST',f'{B}/media','-H',f"Content-Disposition: attachment; filename*=UTF-8''{urllib.parse.quote(name)}",'-H','Content-Type: image/png','--data-binary','@'+path])
+    name=os.environ.get('WP_FILE_PREFIX','post')+('-thumb.png' if 'thumb' in path else '-body.png')
+    r=curl(['-X','POST',f'{B}/media','-H',f'Content-Disposition: attachment; filename="{name}"','-H','Content-Type: image/png','--data-binary','@'+path])
     if 'id' not in r: raise SystemExit(f'upload fail {r}')
     curl(['-X','POST',f'{B}/media/{r["id"]}','-H','Content-Type: application/json','-d',json.dumps({'alt_text':alt})])
     return r['id'],r['source_url']
@@ -44,8 +47,7 @@ for t in tags:
 data={'title':title,'slug':slug,'status':a.status,'categories':cid,'tags':tids,'featured_media':S['thumb'][0],'excerpt':excerpt,
       'content':'<!-- wp:html -->\n'+body+'\n<!-- /wp:html -->'}
 url=f"{B}/posts/{S['post_id']}" if S.get('post_id') else f'{B}/posts'
-r=curl(['-X','POST',url,'-H','Content-Type: application/json','--data-binary','@-'] ) if False else None
-p=subprocess.run(['curl','-sS','-A','Mozilla/5.0','-X','POST',url,'-H','Content-Type: application/json','--data-binary','@-'],input=json.dumps(data),capture_output=True,text=True)
+p=subprocess.run(['curl','-sS','-A','Mozilla/5.0']+AUTH+['-X','POST',url,'-H','Content-Type: application/json','--data-binary','@-'],input=json.dumps(data),capture_output=True,text=True)
 r=json.loads(p.stdout)
 if 'id' not in r: raise SystemExit(f'post fail {p.stdout[:500]}')
 S['post_id']=r['id'];S['status']=r['status'];S['link']=r['link'];json.dump(S,open(st,'w'),ensure_ascii=False)
