@@ -32,6 +32,15 @@
 - 열린 브라우저의 실제 로그인 계정·프로필을 먼저 확인하고, accounts.md를 읽고 갱신한다.
 - 계정·목적지가 불명확할 때만 질문한다.
 
+## 디피로그 글 레이아웃 (매 글 반복, 필수)
+- 규격: `templates/difilog/LAYOUT.md` / 붙여넣기용 원본: `templates/difilog/post_template.html` ({{}}만 교체)
+- 구조 기준: korea-rich.kr 디폴트옵션 글 레이아웃(한눈에 보기 박스+목차+요약 → 광고1 → 버튼1 → H2×7, 표·카드·주의박스·FAQ → 광고 3개·버튼 3개·본문 이미지 1장)
+- 버튼은 반드시 디피로그 `a.detail-button`, 전체를 `<div id="onepage-eitc" class="rf-article-v2">`로 감싼다.
+- 광고는 디피로그 애드센스 ca-pub-6003099227806863 / slot 1464416093 (다른 사이트 광고 코드 절대 사용 금지).
+- 썸네일·본문 이미지 1536×1024: `python3 tools/make_blog_images.py spec.json 출력폴더` (사진은 상업 이용 가능 라이선스만, 출처 기록).
+- SNS 릴스·카드 시안 생성기: `tools/sns_mock/` (gen.py → shot.js).
+- 폰트: Pretendard(OFL). 새 세션에서 없으면 github.com/orioncactus/pretendard 릴리스 zip을 ~/.fonts에 설치.
+
 ## 블로그/워프 글 작성 기준
 - 원문 핵심 질문·대상 독자·이익 정리. 날짜·금액·대상·신청조건·경기정보는 최신 공식 자료로 검증.
 - 마감된 행사·시행 전 정책을 현재 신청 가능한 것처럼 쓰지 않는다.

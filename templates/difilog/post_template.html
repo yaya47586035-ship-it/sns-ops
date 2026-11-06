@@ -1,0 +1,125 @@
+<!-- ============================================================
+ 디피로그 워드프레스 글 템플릿 v1 (2026-11-06)
+ 레이아웃 기준: korea-rich.kr 퇴직연금 디폴트옵션 글 구조
+ 버튼: 디피로그 detail-button / 광고: 디피로그 애드센스(ca-pub-6003099227806863)
+ 사용법: {{...}} 부분만 교체. 워드프레스 편집기 '코드 편집기'(또는 사용자 정의 HTML 블록)에 통째로 붙여넣기.
+ 대표 이미지(썸네일)는 본문에 넣지 않고 워드프레스 '대표 이미지'로 업로드.
+============================================================ -->
+<div id="onepage-eitc" class="rf-article-v2" style="color:#000000; font-weight:400;">
+<style>
+#onepage-eitc h2{font-size:26px;font-weight:700;line-height:1.35;color:#0B3A53;margin:44px 0 18px;}
+#onepage-eitc p{font-size:17px;line-height:1.8;}
+#onepage-eitc .difi-hero{background:linear-gradient(135deg,#0B3A53,#1A9BB8);color:#fff;padding:28px 24px;border-radius:20px;margin:20px 0;box-shadow:0 12px 30px rgba(11,58,83,.22);}
+#onepage-eitc .difi-hero .tag{display:inline-block;background:rgba(255,255,255,.18);padding:6px 16px;border-radius:999px;font-size:14px;font-weight:700;margin-bottom:12px;}
+#onepage-eitc .difi-hero .sum p{color:#fff;font-size:17px;line-height:1.7;margin:0;font-weight:600;}
+#onepage-eitc .difi-toc{background:#fff;padding:20px 24px;border-radius:12px;margin:16px 0 18px;color:#1f2937;}
+#onepage-eitc .difi-toc a{color:#1f2937 !important;text-decoration:none;}
+#onepage-eitc .difi-card{background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:24px;margin:16px 0;box-shadow:0 8px 24px rgba(15,23,42,.05);}
+#onepage-eitc .difi-note{background:#f1f5f9;border-left:5px solid #1A9BB8;padding:20px 22px;border-radius:12px;margin:16px 0;}
+#onepage-eitc .difi-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px;}
+#onepage-eitc .difi-table th{background:#0B3A53;color:#fff;padding:12px;border:1px solid #e5e7eb;}
+#onepage-eitc .difi-table td{padding:12px;border:1px solid #e5e7eb;}
+#onepage-eitc .ad-card{margin:32px 0;padding:10px 12px 12px;background:#fff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;text-align:center;}
+#onepage-eitc .ad-card .ad-label{font-size:11px;color:#9ca3af;text-align:left;margin-bottom:6px;}
+</style>
+
+<!-- [1] 한눈에 보기 + 목차 + 3~4줄 핵심 요약 (핵심 답을 여기서 바로 준다) -->
+<div class="difi-hero">
+<span class="tag">한눈에 보기</span>
+<div class="difi-toc">
+<p style="font-weight:700;margin:0 0 12px;">📌 목차</p>
+<ol style="margin:0;padding-left:20px;line-height:2;">
+<li><a href="#sec1">{{소제목1}}</a></li>
+<li><a href="#sec2">{{소제목2}}</a></li>
+<li><a href="#sec3">{{소제목3}}</a></li>
+<li><a href="#sec4">{{소제목4}}</a></li>
+<li><a href="#sec5">{{소제목5}}</a></li>
+<li><a href="#sec6">자주 묻는 질문 FAQ 📝</a></li>
+<li><a href="#sec7">마무리</a></li>
+</ol>
+</div>
+<div class="sum">
+<p>{{핵심요약1 — 가장 중요한 답: 날짜·금액·대상}}</p>
+<p>{{핵심요약2}}</p>
+<p>{{핵심요약3}}</p>
+</div>
+</div>
+
+<!-- [광고1] 요약 바로 아래 -->
+<div class="ad-card"><div class="ad-label">광고</div>
+<ins class="adsbygoogle" style="display:block;margin:0 auto;" data-ad-client="ca-pub-6003099227806863" data-ad-slot="1464416093" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- [버튼1] 공식 사이트 -->
+<p><a class="detail-button" href="{{공식사이트URL}}" target="_blank" rel="noopener">👉 {{버튼문구1: 공식 사이트에서 무엇을 확인하는지}} →</a></p>
+
+<!-- [2] 10초 요약 / 단계 카드 -->
+<h2 id="sec1">{{소제목1 예: 10초 요약: ○○ 신청 3단계}} 📝</h2>
+<p>{{도입 2~3문장}}</p>
+<div class="difi-card">
+<p style="margin:0 0 10px;"><strong>1단계</strong> · {{}}</p>
+<p style="margin:0 0 10px;"><strong>2단계</strong> · {{}}</p>
+<p style="margin:0;"><strong>3단계</strong> · {{}}</p>
+</div>
+<p>{{보충 1~2문장}}</p>
+
+<!-- [3] 비교표 -->
+<h2 id="sec2">{{소제목2 예: 대상·조건 한눈에 비교}} 💡</h2>
+<p>{{표 설명 1~2문장}}</p>
+<table class="difi-table">
+<thead><tr><th>{{열1}}</th><th>{{열2}}</th><th>{{열3}}</th></tr></thead>
+<tbody>
+<tr><td>{{}}</td><td>{{}}</td><td>{{}}</td></tr>
+<tr><td>{{}}</td><td>{{}}</td><td>{{}}</td></tr>
+<tr><td>{{}}</td><td>{{}}</td><td>{{}}</td></tr>
+</tbody>
+</table>
+<p>{{표 해석: <strong>핵심</strong> 강조}}</p>
+
+<!-- [4] 항목 카드 + 버튼2 + 광고2 + 본문 이미지 -->
+<h2 id="sec3">{{소제목3}} 🏦</h2>
+<p>{{도입}}</p>
+<div class="difi-card">
+<p style="margin:0 0 10px;"><strong>{{항목A}}</strong> · {{설명}}</p>
+<p style="margin:0 0 10px;"><strong>{{항목B}}</strong> · {{설명}}</p>
+<p style="margin:0;"><strong>{{항목C}}</strong> · {{설명}}</p>
+</div>
+<p>{{선택 기준 / 해석}}</p>
+<p><a class="detail-button" href="{{관련URL2 (공식 또는 디피로그 관련글)}}" rel="noopener">👉 {{버튼문구2}} →</a></p>
+<div class="ad-card"><div class="ad-label">광고</div>
+<ins class="adsbygoogle" style="display:block;margin:0 auto;" data-ad-client="ca-pub-6003099227806863" data-ad-slot="1464416093" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<figure style="margin:30px 0;text-align:center;"><img src="{{본문이미지URL (1536x1024)}}" alt="{{주제}} 관련 이미지" style="max-width:100%;height:auto;border-radius:10px;" /><figcaption style="color:#888;font-size:0.85rem;margin-top:8px;">{{이미지 설명 / 사진 출처·라이선스}}</figcaption></figure>
+
+<!-- [5] 경우별 절차 카드 -->
+<h2 id="sec4">{{소제목4}} 💰</h2>
+<p>{{도입: <strong>핵심 주의</strong>}}</p>
+<div class="difi-card">
+<p style="margin:0 0 10px;"><strong>{{경우1}}</strong> · {{}}</p>
+<p style="margin:0;"><strong>{{경우2}}</strong> · {{}}</p>
+</div>
+<p>{{메뉴 경로·확인 방법}}</p>
+
+<!-- [6] 주의점 (왼쪽 선 박스) -->
+<h2 id="sec5">{{소제목5 예: 신청 전 반드시 확인할 주의점}} 💡</h2>
+<div class="difi-note">
+<p style="margin:0 0 10px;"><strong>{{주의1 굵게.}}</strong> {{설명}}</p>
+<p style="margin:0 0 10px;"><strong>{{주의2 굵게.}}</strong> {{설명}}</p>
+<p style="margin:0;"><strong>{{주의3 굵게.}}</strong> {{설명}}</p>
+</div>
+
+<!-- [7] FAQ (질문마다 왼쪽 선 박스) -->
+<h2 id="sec6">자주 묻는 질문 FAQ 📝</h2>
+<div class="difi-note"><p style="margin:0;"><strong>Q. {{질문1}}</strong><br>{{답변1}}</p></div>
+<div class="difi-note"><p style="margin:0;"><strong>Q. {{질문2}}</strong><br>{{답변2}}</p></div>
+<div class="difi-note"><p style="margin:0;"><strong>Q. {{질문3}}</strong><br>{{답변3}}</p></div>
+
+<!-- [8] 마무리 + 버튼3 + 광고3 -->
+<h2 id="sec7">마무리</h2>
+<p>{{핵심 3가지 재정리: 첫째, 둘째, 셋째}}</p>
+<p>{{행동 권유 1~2문장 + "제도는 바뀔 수 있으니 ○○ 공식 안내를 최종 기준으로"}}</p>
+<p><a class="detail-button" href="{{공식사이트URL}}" target="_blank" rel="noopener">👉 {{버튼문구3}} →</a></p>
+<div class="ad-card"><div class="ad-label">광고</div>
+<ins class="adsbygoogle" style="display:block;margin:0 auto;" data-ad-client="ca-pub-6003099227806863" data-ad-slot="1464416093" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
