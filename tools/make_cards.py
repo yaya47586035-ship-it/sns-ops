@@ -7,7 +7,7 @@ pages=[]
 n=len(spec.get('cards',[]))
 for i,c in enumerate(spec.get('cards',[]),1):
     bg='background:var(--navy)' if c.get('dark') else ''
-    body=f'<div style="position:absolute;inset:0;{bg}"></div><div style="position:absolute;left:80px;top:70px" class="brand"><i></i>디피로그</div><div style="position:absolute;right:80px;top:74px;font-size:32px;font-weight:700;opacity:.6">{i}/{n}</div>{c["html"]}'
+    body=c["html"] if c.get('raw') else f'<div style="position:absolute;inset:0;{bg}"></div><div style="position:absolute;left:80px;top:70px" class="brand"><i></i>디피로그</div><div style="position:absolute;right:80px;top:74px;font-size:32px;font-weight:700;opacity:.6">{i}/{n}</div>{c["html"]}'
     pages.append((f'card_{i:02d}',1350,f'<div class="frame card {"dark" if c.get("dark") else ""}">{body}</div>'))
 for i,r in enumerate(spec.get('reel',[]),1):
     pages.append((f'reel_{i:02d}',1920,f'<div class="frame reel">{r["html"]}</div>'))

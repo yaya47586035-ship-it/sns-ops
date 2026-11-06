@@ -1,0 +1,2 @@
+- GmarketSansBold/Medium.woff: G마켓 산스 (지마켓 무료 폰트, 상업적 이용 가능 / 폰트 자체 판매·재배포 목적 수정 불가). 출처: 눈누 projectnoonnu/noonfonts_2001
+- Pretendard: OFL (github.com/orioncactus/pretendard) — ~/.fonts 설치

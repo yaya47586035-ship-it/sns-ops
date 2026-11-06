@@ -38,7 +38,10 @@
 - 버튼은 반드시 디피로그 `a.detail-button`, 전체를 `<div id="onepage-eitc" class="rf-article-v2">`로 감싼다.
 - 광고는 디피로그 애드센스 ca-pub-6003099227806863 / slot 1464416093 (다른 사이트 광고 코드 절대 사용 금지).
 - 썸네일·본문 이미지 1536×1024: `python3 tools/make_blog_images.py spec.json 출력폴더` (사진은 상업 이용 가능 라이선스만, 출처 기록).
-- SNS 릴스·카드 시안 생성기: `tools/sns_mock/` (gen.py → shot.js).
+- **카드뉴스·릴스·썸네일 기본 스타일(사용자 승인 2026-11-06)**: 실사 사진 전면 배경 + 하단 어두운 그라데이션 + 흰 알약 라벨(검정 테두리, 키워드 파랑) + G마켓 산스 Bold 초대형 제목(흰/노랑 #FFD43B, 두꺼운 검정 외곽선+그림자) + 체크박스 줄 + 표지엔 말풍선. 참고: 국세청 '누가, 어떻게 신청하나요?' 카드.
+  - 예시 원본: `content/2026-11-06_근로자녀장려금-기한후신청/cards/spec_photo.py` (복사 후 문구·사진만 교체) → `python3 tools/make_cards.py spec_photo.json 출력폴더`
+  - 사진: WordPress Photo Directory(CC0, Openverse API `source=wordpress&license=cc0`)에서 검색·다운로드, photos/CREDITS.md에 기록.
+  - 글꼴: tools/fonts/GmarketSans*.woff
 - 폰트: Pretendard(OFL). 새 세션에서 없으면 github.com/orioncactus/pretendard 릴리스 zip을 ~/.fonts에 설치.
 
 ## 블로그/워프 글 작성 기준
