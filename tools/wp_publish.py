@@ -17,6 +17,17 @@ head=re.search(r'<!--(.*?)-->',src,re.S).group(1)
 def f(k): return re.search(rf'^\s*{k}:\s*(.+)$',head,re.M).group(1).strip()
 title=f('제목');slug=f(r'슬러그\(고유주소\)');cat=f('카테고리');tags=[t.strip() for t in f('태그').split(',')];excerpt=f(r'요약\(메타 설명\)')
 body=src[src.index('-->')+3:].strip()
+def space_sentences(b):
+    # 사용자 규칙: 문장 끝 마침표마다 빈 줄 한 줄(<br><br>). 굵게 처리 뒤 마침표 포함. 여러 번 실행해도 동일.
+    parts=re.split(r'(<style>.*?</style>|<script>.*?</script>)',b,flags=re.S)
+    C=r'(?:</(?:strong|b|em|span)>)*'
+    for i in range(0,len(parts),2):
+        t=parts[i]
+        t=re.sub(r'([다요]'+C+r'\.'+C+r')(?:<br>\s*)+(?=\S)',r'\1<br><br>\n',t)
+        t=re.sub(r'([다요]'+C+r'\.'+C+r')[ \t]+(?=[^<\s]|<strong|<a)',r'\1<br><br>\n',t)
+        parts[i]=t
+    return ''.join(parts)
+body=space_sentences(body)
 st=os.path.join(a.dir,'wp_state.json');S=json.load(open(st)) if os.path.exists(st) else {}
 # duplicate check
 ex=curl([f'{B}/posts?slug={urllib.parse.quote(slug)}&status=publish,draft,pending,future,private&context=edit&_fields=id,status,link'])
