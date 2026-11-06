@@ -1,0 +1,6 @@
+card_01 https://blog.difizone.com/wp-content/uploads/2026/11/sns-earned-income-credit-card-01.png
+card_02 https://blog.difizone.com/wp-content/uploads/2026/11/sns-earned-income-credit-card-02.png
+card_03 https://blog.difizone.com/wp-content/uploads/2026/11/sns-earned-income-credit-card-03.png
+card_04 https://blog.difizone.com/wp-content/uploads/2026/11/sns-earned-income-credit-card-04.png
+card_05 https://blog.difizone.com/wp-content/uploads/2026/11/sns-earned-income-credit-card-05.png
+card_06 https://blog.difizone.com/wp-content/uploads/2026/11/sns-earned-income-credit-card-06.png
