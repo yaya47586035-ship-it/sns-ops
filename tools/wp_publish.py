@@ -23,8 +23,8 @@ def space_sentences(b):
     C=r'(?:</(?:strong|b|em|span)>)*'
     for i in range(0,len(parts),2):
         t=parts[i]
-        t=re.sub(r'([다요]'+C+r'\.'+C+r')(?:<br>\s*)+(?=\S)',r'\1<br><br>\n',t)
-        t=re.sub(r'([다요]'+C+r'\.'+C+r')[ \t]+(?=[^<\s]|<strong|<a)',r'\1<br><br>\n',t)
+        t=re.sub(r'([가-힣)%]'+C+r'\.'+C+r')(?:<br>\s*)+(?=\S)',r'\1<br><br>\n',t)
+        t=re.sub(r'([가-힣)%]'+C+r'\.'+C+r')[ \t]+(?=[^<\s]|<strong|<a)',r'\1<br><br>\n',t)
         parts[i]=t
     return ''.join(parts)
 body=space_sentences(body)
